@@ -10,8 +10,9 @@
 
 const char *argp_program_version = VERSION;
 const char *argp_program_bug_address = "http://github.com/pylover/upper";
-static char doc[] = "Serial Interface multiplexer";
-static char args_doc[] = "OUTPUT";
+static char doc[] = \
+    "Read from standard input, make upper case and write to a TCP socket";
+static char args_doc[] = "HOST";
 
 
 /* Options definition */
