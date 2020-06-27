@@ -1,7 +1,7 @@
 CC = gcc
 KERNEL = $(shell uname -r)
 LIBS = -lm
-CFLAGS = -Wall -I. -I/usr/src/linux-headers-$(KERNEL)/include
+CFLAGS = -Wall -I. -I/usr/include/x86_64-linux-gnu
 OBJECTS = common.o cli.o tty.o output.o input.o
 PREFIX := /usr/local
 EXEC := upper
