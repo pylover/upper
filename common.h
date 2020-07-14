@@ -6,7 +6,7 @@
 #include <errno.h>
 #include <stdbool.h>
 
-#define VERSION "1.2.0"
+#define VERSION "1.3.0"
 #define OK  0
 #define ERR -1
 
@@ -54,6 +54,7 @@ struct Settings {
     bool verbose;
     int tcpport;
     bool noupper;
+    bool noncanonical;
 };
 
 

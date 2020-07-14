@@ -7,6 +7,7 @@ volatile struct Settings settings = {
     0,
     DEFAULT_TCPPORT,
     false,
+    false,
 };
 
 

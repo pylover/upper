@@ -25,6 +25,8 @@ static struct argp_option options[] = {
         "Remote TCP port, default: " STR(DEFAULT_TCPPORT)},
     {"noupper", 'n', NULL, 0,
         "Do not uppercase"},
+    {"noncanonical", 'c', NULL, 0,
+        "Make stdin noncanonical, termios(3)"},
 	{0}
 };
 
@@ -47,6 +49,10 @@ static int parse_opt(int key, char *arg, struct argp_state *state) {
         
         case 'n':
             settings.noupper = true;
+            break;
+        
+        case 'c':
+            settings.noncanonical = true;
             break;
 
 		case ARGP_KEY_ARG:
