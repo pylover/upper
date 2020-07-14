@@ -23,6 +23,8 @@ static struct argp_option options[] = {
         "Verbose Mode"},
     {"port", 'p', "TCPPORT", 0,
         "Remote TCP port, default: " STR(DEFAULT_TCPPORT)},
+    {"noupper", 'n', NULL, 0,
+        "Do not uppercase"},
 	{0}
 };
 
@@ -36,13 +38,17 @@ static int parse_opt(int key, char *arg, struct argp_state *state) {
             break;
 
         case 'v':
-            settings.verbose = 1;
+            settings.verbose = true;
             break;
 
 		case 'b':
 			settings.baudrate = atoi(arg);
 			break;
         
+        case 'n':
+            settings.noupper = true;
+            break;
+
 		case ARGP_KEY_ARG:
 			if (state->arg_num >= 1) {
 				/* Too many arguments. */

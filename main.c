@@ -25,9 +25,11 @@ static int process_inputevent(int inputfd, int outfd) {
     }
     buffer[err] = 0;
 
-    // Make all chars upper case
-    for (i = 0; i < err; i++) {
-        buffer[i] = toupper(buffer[i]);
+    if (!settings.noupper) {
+        // Make all chars upper case
+        for (i = 0; i < err; i++) {
+            buffer[i] = toupper(buffer[i]);
+        }
     }
 
     output(outfd, "%s", buffer);

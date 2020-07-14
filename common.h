@@ -4,8 +4,9 @@
 #include <stdio.h>
 #include <string.h>
 #include <errno.h>
+#include <stdbool.h>
 
-#define VERSION "1.1.0a"
+#define VERSION "1.2.0"
 #define OK  0
 #define ERR -1
 
@@ -50,8 +51,9 @@ extern int errno;
 struct Settings {
     char *output;
     unsigned int baudrate;
-    char verbose;
+    bool verbose;
     int tcpport;
+    bool noupper;
 };
 
 
