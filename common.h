@@ -58,7 +58,7 @@ struct Settings {
 };
 
 
-volatile struct Settings settings;
+extern struct Settings settings;
 
 char * strnstr(const char *s, const char *find, size_t slen);
 

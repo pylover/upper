@@ -1,7 +1,7 @@
 #include "common.h"
 
 
-volatile struct Settings settings = {
+struct Settings settings = {
     DEFAULT_OUTPUT,
     DEFAULT_BAUDRATE,
     0,
